@@ -1,0 +1,17 @@
+# Array
+require 'redspeca.red'
+require 'core/array/allocate_spec.rb'
+require 'core/array/append_spec.rb'
+require 'core/array/array_spec.rb'
+require 'core/array/assoc_spec.rb'
+require 'core/array/at_spec.rb'
+require 'core/array/clear_spec.rb'
+require 'core/array/clone_spec.rb'
+require 'core/array/collect_spec.rb'
+require 'core/array/compact_spec.rb'
+require 'core/array/comparison_spec.rb'
+require 'core/array/concat_spec.rb'
+require 'core/array/constructor_spec.rb'
+require 'core/array/delete_at_spec.rb'
+require 'core/array/delete_if_spec.rb'
+
