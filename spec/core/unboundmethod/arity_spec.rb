@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "UnboundMethod#arity" do |it| 
-  before(:each) do
+  it.before(:each) do
     @um = UnboundMethodSpecs::Methods.new
   end
 

@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Method#==" do |it| 
-  before(:each) do
+  it.before(:each) do
     @m = MethodSpecs::Methods.new
     @m2 = MethodSpecs::Methods.new
     @a = MethodSpecs::A.new

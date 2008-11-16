@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Numeric#remainder" do |it| 
-  before(:each) do
+  it.before(:each) do
     @obj    = NumericSub.new
     @result = mock("Numeric#% result")
     @other  = mock("Passed Object")

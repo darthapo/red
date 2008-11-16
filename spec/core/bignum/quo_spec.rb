@@ -1,7 +1,7 @@
 # require File.dirname(__FILE__) + '/../../spec_helper'
 
 describe "Bignum#quo" do |it| 
-  before(:each) do
+  it.before(:each) do
     @bignum = bignum_value(3)
   end
 

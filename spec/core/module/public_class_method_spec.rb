@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Module#public_class_method" do |it| 
-  before(:each) do
+  it.before(:each) do
     class << ModuleSpecs::Parent
       private
       def public_method_1; end

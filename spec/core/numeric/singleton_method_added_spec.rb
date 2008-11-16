@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Numeric#singleton_method_added" do |it| 
-  before(:all) do
+  it.before(:all) do
     class ::NumericSub
       # We want restore default Numeric behaviour for this particular test
       remove_method :singleton_method_added

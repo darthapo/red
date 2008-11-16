@@ -15,7 +15,7 @@ module ObjectSpecs
 end
 
 describe Object, "#instance_of?" do
-  before(:each) do
+  it.before(:each) do
     @o = ObjectSpecs::InstanceClass.new
   end
 

@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Method#to_proc" do |it| 
-  before(:each) do
+  it.before(:each) do
     @m = MethodSpecs::Methods.new
     @meth = @m.method(:foo)
   end

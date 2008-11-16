@@ -17,7 +17,7 @@ module ObjectSpecs
 end
 
 describe :object_kind_of, :shared => true do
-  before(:each) do
+  it.before(:each) do
     @o = ObjectSpecs::KindaClass.new
   end
 

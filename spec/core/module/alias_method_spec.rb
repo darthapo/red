@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Module#alias_method" do |it| 
-  before(:each) do
+  it.before(:each) do
     @class = Class.new(ModuleSpecs::Aliasing)
     @object = @class.new 
   end

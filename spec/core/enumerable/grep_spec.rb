@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Enumerable#grep" do |it| 
-  before(:each) do
+  it.before(:each) do
     @a = EnumerableSpecs::EachDefiner.new( 2, 4, 6, 8, 10)
   end
   

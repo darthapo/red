@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Array#fill" do |it| 
-  before(:all) do
+  it.before(:all) do
     @never_passed = proc{|i| raise ExpectationNotMetError, "the control path should not pass here" }
   end
 

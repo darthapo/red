@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Numeric#ceil" do |it| 
-  before(:each) do
+  it.before(:each) do
     @obj = NumericSub.new
   end
   

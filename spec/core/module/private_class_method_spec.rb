@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Module#private_class_method" do |it| 
-  before(:each) do
+  it.before(:each) do
     # This is not in classes.rb because after marking a class method private it 
     # will stay private.
     class << ModuleSpecs::Parent

@@ -3,7 +3,7 @@
 # require File.dirname(__FILE__) + '/shared/iteration'
 
 describe "Hash#select" do |it| 
-  before(:each) do
+  it.before(:each) do
     @hsh = {1 => 2, 3 => 4, 5 => 6}
     @empty = {}
   end

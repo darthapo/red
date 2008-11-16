@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Array#delete_if" do |it| 
-  before do
+  it.before(:all) do
     @a = [ "a", "b", "c" ] 
   end
 

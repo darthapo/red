@@ -2,7 +2,7 @@
 # require File.dirname(__FILE__) + '/fixtures/classes'
 
 describe "Method#unbind" do |it| 
-  before(:each) do
+  it.before(:each) do
     @normal = MethodSpecs::Methods.new
     @normal_m = @normal.method :foo
     @normal_um = @normal_m.unbind
