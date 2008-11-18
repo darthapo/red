@@ -1,3 +1,4 @@
+# This file no longer applies. Will be deleted
 describe Array do |it|
   # it.can 'intersect' do
   #   ([1,1,3,5] & [1,2,3]).should_equal([1,3])
