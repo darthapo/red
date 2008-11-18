@@ -1,4 +1,4 @@
-Spec.describe Object do |it|
+describe Object do |it|
   it.can 'find its class'
   
   it.can 'be extended with additioanl functionality' do

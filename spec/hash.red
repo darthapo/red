@@ -1,4 +1,4 @@
-Spec.describe Hash do |it|
+describe Hash do |it|
   it.can 'initialize itself with { } literals' do
     {'a' => 'b'}.should_equal({'a' => 'b'})
   end

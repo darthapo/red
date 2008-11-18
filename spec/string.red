@@ -1,4 +1,4 @@
-Spec.describe String do |it|
+describe String do |it|
   it.can 'initialze with the " " literals' do
     'red'.should_equal(String.new('red'))
   end
