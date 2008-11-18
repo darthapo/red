@@ -1,4 +1,4 @@
-require 'redspeca.red'
+require 'redspec'
 
 # require 'language/alias_spec.rb' # fails due to class <<
 # require 'language/and_spec.rb'   # fails due to single line assignment a, b = nil
