@@ -1,6 +1,18 @@
 module Red
+
+  def self.config(&block)
+    yield plugin_options
+  end
+  
+  def self.plugin_options
+    @@plugin_options ||= {
+      :always_build => false,
+      :src_dir => "public/javascripts/red"
+    }
+  end
+
   def self.update_javascripts
-    red_dir = @@plugin_options.fetch(:src_dir, 'public/javascripts/red/')
+    red_dir = plugin_options[:src_dir]
     (Dir.glob("%s/*.red" % red_dir) + Dir.glob("%s/*.rb" % red_dir)).each do |filepath|
       basename = File.basename(filepath).gsub(/\.(rb|red)/,'')
       if self.update?(basename)
@@ -15,8 +27,8 @@ module Red
   end
   
   def self.update?(basename)
-    return true if @@plugin_options.fetch(:always_build, false) or !File.exists?('public/javascripts/%s.js' % basename)
-    red_dir = @@plugin_options.fetch(:src_dir, 'public/javascripts/red/')
+    return true if plugin_options[:always_build] or !File.exists?('public/javascripts/%s.js' % basename)
+    red_dir = plugin_options[:src_dir]
     return (File.mtime('%s/%s.red' % [red_dir, basename]) rescue File.mtime('%s/%s.rb' % [red_dir, basename])) > File.mtime('public/javascripts/%s.js' % basename)
   end
   

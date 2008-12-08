@@ -266,11 +266,4 @@ module Red # :nodoc:
     return string
   end
   
-  def self.config(&block)
-    @@plugin_options = {
-      :always_build => false,
-      :src_dir => "public/javascripts/red"
-    }
-    yield @@plugin_options
-  end
 end
