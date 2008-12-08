@@ -253,13 +253,24 @@ module Red # :nodoc:
     self.is_a?(Array) && sexp_types.include?(self.first)
   end
   
-  def self.rails
+  def self.rails(opts={})
     require 'red/plugin'
+    self.config do |conf|
+      conf.merge! opts
+    end
   end
   
   def javascript_safe_succ!(string)
     string.succ!
     string.succ! if %w(as break byte case catch char class const do else enum false final float for goto if in int is long on new null short super this throw true try use var void while with).include?(string)
     return string
+  end
+  
+  def self.config(&block)
+    @@plugin_options = {
+      :always_build => false,
+      :src_dir => "public/javascripts/red"
+    }
+    yield @@plugin_options
   end
 end

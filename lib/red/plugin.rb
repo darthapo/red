@@ -1,6 +1,6 @@
 module Red
   def self.update_javascripts
-    red_dir = 'public/javascripts/red/'
+    red_dir = @@plugin_options.fetch(:src_dir, 'public/javascripts/red/')
     (Dir.glob("%s/*.red" % red_dir) + Dir.glob("%s/*.rb" % red_dir)).each do |filepath|
       basename = File.basename(filepath).gsub(/\.(rb|red)/,'')
       if self.update?(basename)
@@ -15,8 +15,9 @@ module Red
   end
   
   def self.update?(basename)
-    return true unless File.exists?('public/javascripts/%s.js' % basename)
-    return (File.mtime('public/javascripts/red/%s.red' % basename) rescue File.mtime('public/javascripts/red/%s.rb' % basename)) > File.mtime('public/javascripts/%s.js' % basename)
+    return true if @@plugin_options.fetch(:always_build, false) or !File.exists?('public/javascripts/%s.js' % basename)
+    red_dir = @@plugin_options.fetch(:src_dir, 'public/javascripts/red/')
+    return (File.mtime('%s/%s.red' % [red_dir, basename]) rescue File.mtime('%s/%s.rb' % [red_dir, basename])) > File.mtime('public/javascripts/%s.js' % basename)
   end
   
   # def self.update_javascripts
